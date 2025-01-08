@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pharmacy Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <h1>💊 Pharmacy Tracker</h1>
+    <p class="subtitle">Manage your pharmacy inventory with ease.</p>
 
     <form id="itemForm">
-      <label for="itemName">Item Name:</label>
-      <input type="text" id="itemName" placeholder="Enter item name" required />
+      <div class="form-group">
+        <label for="itemName">Item Name</label>
+        <input 
+          type="text" 
+          id="itemName" 
+          placeholder="e.g., Ibuprofen" 
+          required 
+        />
+      </div>
 
-      <label for="expiryDate">Expiry Date:</label>
-      <input type="date" id="expiryDate" required />
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input 
+          type="date" 
+          id="expiryDate" 
+          required 
+        />
+      </div>
 
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" placeholder="Enter quantity" required min="1" />
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input 
+          type="number" 
+          id="quantity" 
+          placeholder="e.g., 10" 
+          required 
+          min="1" 
+        />
+      </div>
 
-      <button type="submit">Add Item</button>
+      <button type="submit" class="add-button">Add Item</button>
     </form>
 
-    <ul id="inventoryList"></ul>
+    <div id="emptyMessage" class="empty-message">No items in inventory yet.</div>
+    <ul id="itemList" class="item-list"></ul>
   </div>
 
   <script src="script.js"></script>
