@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💊 Pharmacy Tracker</h1>
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Enter item name" required>
+      <input type="date" id="expiryDate" required>
+      <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+      <button type="submit">Add Item</button>
+    </form>
+    <ul id="itemList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
